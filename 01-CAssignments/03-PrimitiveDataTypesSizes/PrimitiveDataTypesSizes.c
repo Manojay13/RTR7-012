@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main(void)
+{
+	//code
+	printf("\n\n");
+	
+	
+	printf("Size of'int' = %ld bytes\n",sizeof(int));
+	printf("Size of 'unisgned int' = %ld bytes\n",sizeof(unsigned int));
+	printf("Size of 'long' = %ld bytes\n",sizeof(long));
+	printf("Size of 'long long' = %ld bytes\n",sizeof(long long));
+
+	printf("Size of 'float' = %ld bytes\n",sizeof(float));
+	printf("Size of 'double' = %ld bytes\n",sizeof(double));
+	printf("Size of 'double double'=%ld bytes\n",sizeof(long double));
+	
+
+	printf("\n\n-----TO avoid the warning as siof returns size_t because size cannot be negative");
+
+	printf("Size of'int' = %zd bytes\n",sizeof(int));
+	printf("Size of 'unisgned int' = %zd bytes\n",sizeof(unsigned int));
+	printf("Size of 'long' = %zd bytes\n",sizeof(long));
+	printf("Size of 'long long' = %zd bytes\n",sizeof(long long));
+
+	printf("Size of 'float' = %zd bytes\n",sizeof(float));
+	printf("Size of 'double' = %zd bytes\n",sizeof(double));
+	printf("Size of 'double double'=%zd bytes\n",sizeof(long double));
+
+	return(0);
+
+
+}
