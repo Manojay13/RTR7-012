@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+int main(void)
+{
+	//variable declarations
+	int a_mk;
+	int b_mk;
+	int c_mk;
+
+	//code
+	printf("\n\n");
+	printf("Enter the Number: ");
+	scanf("%d",&a_mk);
+
+	printf("Enter Another Number: ");
+	scanf("%d",&b_mk);
+	
+	printf("\n\n");
+
+	//Since ,In All Follwing 5 Cases ,The Operand on The Left 'a' Is getting Repeatedd Immidiately on Right(e.g.: a = a + b or a = a - b),
+	//We Are using Compound Assignmnet Operators +=,-=, *=, /=,%=
+	//Since, 'a'  Will Be Assigned The Value(a+b) At The Expression (a += b) ,We Must
+	//Save The original Value of 'a' To another variable 'x'
+	x = a;
+
+	a += b; //a = a + b
+	printf("Addition of A = %d  and B = %d Gives %d.\n", x, b, a);
+
+	//Value of 'a' Altered In the Above Expression Is Used Here...
+	//Since, 'a' Will Be Assigned The Value of 'a' in another variable 'x'
+	x = a;
+	a -= b;//a= a-b
+	printf("Substraction of A = %d and B = %d Gives %d\n", x, b, a);
+
+	//Value of 'a' Altered in Above expression Is used here...
+	//Since , 'a' Will be Assigned Value 'a' the Value of (a*b)  At The Expression 
+	//(a /= b), We must save original Value of 'a' To Another Value 'x'
+	x = a;
+	a *= b;// a = a * b
+	printf("Multiplication of A = %d and B = %d Gives %d.\n", x, b, a);
+
+	//Value Of 'a' Altered In The Above Expression Is Used Here...
+	//Since 'a' Will be Assigned Value of (a%b) At The Expression (a %= b)
+	x = a;
+	a %= b;//a= a % b
+	printf("Division Of A = %d and B=%d ");
+
+
+	return(0);
+}

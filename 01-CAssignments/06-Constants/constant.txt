@@ -1,0 +1,122 @@
+1  #include <stdio.h>
+2  
+3  #define MY_PI 3.1415926535897932
+4  
+5  #define AMC_STRING "AstroMediComp RTR"
+6  
+7  //If First Constant Is Not Assigned A Value, It Is Assumed To Be 0 i.e:          ↴
+        'SUNDAY' Will Be 0
+8  //And The Rest Of The Constants Are Assigned Consecutive Integer Values From 0   ↴
+        onwards i.e: 'MONDAY' Will Be 1, 'TUESDAY' Will Be 2, and so on...
+9  
+10 // Un-named enums
+11 enum
+12 {
+13      SUNDAY,
+14      MONDAY,
+15      TUESDAY,
+16      WEDNESDAY,
+17      THURSDAY,
+18      FRIDAY,
+19      SATURDAY,
+20 };
+21 
+22 enum
+23 {
+24      JANUARY = 1,
+25      FEBRUARY,
+26      MARCH,
+27      APRIL,
+28      MAY,
+29      JUNE,
+30      JULY,
+31      AUGUST,
+32      SEPTEMBER,
+33      OCTOBER,
+34      NOVEMBER,
+35      DECEMBER
+36 };
+37 
+38 //Named enums
+39 enum Numbers
+40 {
+41      ONE,
+42      TWO,
+43      THREE,
+44      FOUR,
+45      FIVE = 5,
+46      SIX,
+47      SEVEN,
+48      EIGHT,
+49      NINE,
+50      TEN
+51 };
+52 
+53 enum boolean
+54 {
+55      TRUE = 1,
+56      FALSE = 0
+57 };
+58 
+59 int main(void)
+60 {
+61      //local constant declarations
+62      const double epsilon = 0.000001;
+63 
+64      //code
+65      printf("\n\n");
+66      printf("Local Constant Epsilon = %lf\n\n", epsilon);
+67 
+68      printf("Sunday Is Day Number = %d\n", SUNDAY);
+69      printf("Monday Is Day Number = %d\n", MONDAY);
+70      printf("Tuesday Is Day Number = %d\n", TUESDAY);
+71      printf("Wednesday Is Day Number = %d\n", WEDNESDAY);
+72      printf("Thursday Is Day Number = %d\n", THURSDAY);
+73      printf("Friday Is Day Number = %d\n", FRIDAY);
+74      printf("Saturday Is Day Number = %d\n\n", SATURDAY);
+75 
+76      printf("One Is Enum Number = %d\n", ONE);
+77      printf("Two Is Enum Number = %d\n", TWO);
+78      printf("Three Is Enum Number = %d\n", THREE);
+79      printf("Four Is Enum Number = %d\n", FOUR);
+80      printf("Five Is Enum Number = %d\n", FIVE);
+81      printf("Six Is Enum Number = %d\n", SIX);
+82      printf("Seven Is Enum Number = %d\n", SEVEN);
+83      printf("Eight Is Enum Number = %d\n", EIGHT);
+84      printf("Nine Is Enum Number = %d\n", NINE);
+85      printf("Ten Is Enum Number = %d\n\n", TEN);
+86 
+87      printf("January Is Month Number = %d\n", JANUARY);
+88      printf("February Is Month Number = %d\n", FEBRUARY);
+89      printf("March Is Month Number = %d\n", MARCH);
+90      printf("April Is Month Number = %d\n", APRIL);
+91      printf("May Is Month Number = %d\n", MAY);
+92      printf("June Is Month Number = %d\n", JUNE);
+93      printf("July Is Month Number = %d\n", JULY);
+94      printf("August Is Month Number = %d\n", AUGUST);
+95      printf("September Is Month Number = %d\n", SEPTEMBER);
+96      printf("October Is Month Number = %d\n", OCTOBER);
+97      printf("November Is Month Number = %d\n", NOVEMBER);
+98      printf("December Is Month Number = %d\n\n", DECEMBER);
+99 
+100     printf("Value Of TRUE Is = %d\n", TRUE);
+101     printf("Value Of FALSE Is = %d\n\n", FALSE);
+102 
+103     printf("MY_PI Macro value = %.101f\n\n", MY_PI);
+104     printf("Area Of Circle Of Radius 2 units = %f\n\n", (MY_PI * 2.0f *              ↴
+             2.0f)); //pi * r * r = area of circle of radius 'r'
+105 
+106     printf("\n\n");
+107 
+108     printf(AMC_STRING);
+109     printf("\n\n");
+110 
+111     printf("AMC_STRING is : %s\n", AMC_STRING);
+112     printf("\n\n");
+113 
+114     return(0);
+115 }
+116 
+117 
+118 
+119

@@ -1,0 +1,32 @@
+#include<stdio.h>//'stdio.h' contains declaration of 'printf()'
+
+//Entry Point Function => main() => Valid Return Type(int) and 3 Paramaters
+//(int argc,char * argv[], char *envp[])
+
+int main(int argc_mk,char *argv_mk[],char *envp_mk[])
+{
+	//variable declarations
+	int i_mk;
+
+	//code 
+	printf("\n\n");
+	printf("Hello World,MK!!!\n\n");//Library Functions
+	printf("Number of Commnand Line Arguments = %d\n\n",argc_mk);
+	printf("Command Line Arguments Passed To This Program Are:\n\n");
+	for(i_mk = 0; i_mk<argc_mk;i_mk++)
+	{
+		printf("Command Line Arguments Number %d = %s\n",(i_mk+1),argv_mk[i_mk]);
+	}
+	printf("\n\n");
+
+	printf("First 20 Environmental Variables Passed To This Program Are:\n\n");
+	/*for(i_mk = 0;i_mk < 20;i_mk++)
+	{
+		printf("Environment Vaiable Number %d %s\n",(i_mk+1),envp_mk[i_mk]);
+	}*/
+	for(i_mk = 0;envp_mk[i_mk]!=NULL;i_mk++)
+	{
+		printf("Environment Vaiable Number %d %s\n",(i_mk+1),envp_mk[i_mk]);
+	}
+	return(0);
+}

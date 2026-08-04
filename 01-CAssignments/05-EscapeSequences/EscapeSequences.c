@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(void)
+{
+	//code
+	printf("\n\n");
+	printf("Going on Next line using \\n Escape Sequence\n\n");
+	printf("Demonstrating \t Horizontal \t Tab \t Using \t \\t Escape "
+		"Sequence !!!\n\n");
+	printf("\"This is A DOuble Quoted Output\" Done Using \\\" \\\" Escape"
+	       "Sequence\n\n");
+	printf("\'This is single Quoted Output\' Done using \\\' \\\' Escape"
+	       "Sequence\n\n");
+	printf("BACKSPACE Turned to BACKSPACE\b using escape sequence \\b\n\n");
+
+
+	/*
+	 \r (Carriage Return) cursor ला current line च्या एकदम start ला घेऊन जातो. त्यामुळे आधी print झालेला text नवीन text मुळे overwrite होतो.Why Your Text Disappears🔹 Line 1: \r एकदम starting ला आहे. Cursor आधीच start ला येतो, त्यामुळे कोणताही text overwrite होत नाही.🔹 Line 2: Terminal आधी Demonstrating  print करते. मग \r मुळे cursor परत line च्या start ला येतो. त्यानंतरचा बाकीचा text Demonstrating  वर overwrite होतो.🔹 Line 3: Terminal आधी Demonstrating Carriage  print करते. \r cursor ला start ला आणतो. पुढचे शब्द पहिल्या part वर overwrite होतात.*/
+	printf("\r Demonstrating Carriage Return Using \\r Escape Sequence\n");
+	printf("Demonstrating \r Carriage Return Using \\r Escape Sequence\n");
+	printf("Demonstrating Carriage \r  Return using \\r Escape sequence\n\n");
+
+	printf("Demonstrating \x41 Using \\xhh Escape sequence \n\n");//0x41 Is the
+	// Demonstrating hexadecimal Code For Letter 'A'. 'xhh' Is Place-Holder For 'x'
+	//Followed by 2 digits(hh) ,altogether forming Hexadecimal Number
+	
+       printf("Demonstration \102 Using \\ooo Escape Sequence\n\n");//102 is The
+	//Octal Code For Letter 'B' . 'ooo' Is The Place-Holder For 3 Digits Forming An 
+	//Octal Number
+
+	return(0);
+}
