@@ -8,6 +8,7 @@ int main(void)
 
 	//variable declarations
 	unsigned int a_mk;
+	unsigned int num_bits_mk;
 	unsigned int result_mk;
 
 	//code
@@ -15,27 +16,27 @@ int main(void)
 	printf("Enter An Integer = ");
 	scanf("%u", &a_mk);
 
-	printf("\n\n\n\n");
-	result_mk = ~a_mk;
-	printf("Bitwise COMPLEMENTING Of \nA_mk = %d (Decimal) gives result_mk %d (Decimal).\n\n", a_mk, result_mk);
+	printf("\n\n");
+	printf("By How Many Bits Do You Want To Shift A_mk = %d To The Right? ", a_mk);
+	scanf("%u", &num_bits_mk);
 
+	printf("\n\n\n\n");
+	result_mk = a_mk >> num_bits_mk;
+	printf("Bitwise RIGHT-SHIFTing A_mk = %d By %d Bits \nGives The Result_mk = %d (Decimal).\n\n", a_mk, num_bits_mk, result_mk);
 	PrintBinaryFormOfNumber(a_mk);
 	PrintBinaryFormOfNumber(result_mk);
 
-	exit(EXIT_SUCCESS);s
+	exit(EXIT_SUCCESS);
 }
 
 
-// ****** BEGINNERS TO C PROGRAMMING LANGUAGE : PLEASE IGNORE THE CODE OF THE FOLLOWING FUNCTION SNIPPET 'PrintBinaryFormOfNumber()' ******
-// ****** YOU MAY COME BACK TO THIS CODE AND WILL UNDERSTAND IT MUCH BETTER AFTER YOU HAVE COVERED ARRAYS, LOOPS AND FUNCTIONS ******
-// ****** THE ONLY OBJECTIVE OF WRITING THIS FUNCTION WAS TO OBTAIN THE BINARY REPRESENTATION OF DECIMAL INTEGERS SO THAT BIT-WISE AND-ing, OR-ing, COMPLEMENT AND BIT-SHIFTING COULD BE UNDERSTOOD WITH GREAT EASE ******
 
 void PrintBinaryFormOfNumber(unsigned int decimal_number_mk)
 {
 	//variable declarations
 	unsigned int quotient_mk, remainder_mk;
 	unsigned int num_mk;
-	unsigned int binary_array_mk[8]; // Fixed: Added back the [8] array size declaration
+	unsigned int binary_array_mk[8];
 	int i_mk;
 
 	//code
@@ -56,6 +57,5 @@ void PrintBinaryFormOfNumber(unsigned int decimal_number_mk)
 
 	for (i_mk = 0; i_mk < 8; i_mk++)
 		printf("%u", binary_array_mk[i_mk]);
-
 	printf("\n\n");
 }

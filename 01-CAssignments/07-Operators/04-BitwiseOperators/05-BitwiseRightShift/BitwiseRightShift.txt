@@ -7,6 +7,7 @@ int main(void)
 
 	//variable declarations
 	unsigned int a;
+	unsigned int num_bits;
 	unsigned int result;
 
 	//code
@@ -14,10 +15,13 @@ int main(void)
 	printf("Enter An Integer = ");
 	scanf("%u", &a);
 
-	printf("\n\n\n\n");
-	result = ~a;
-	printf("Bitwise COMPLEMENTING Of \nA = %d (Decimal) gives result %d (Decimal).\n\n", a, result);
+	printf("\n\n");
+	printf("By How Many Bits Do You Want To Shift A = %d To The Right? ", a);
+	scanf("%u", &num_bits);
 
+	printf("\n\n\n\n");
+	result = a >> num_bits;
+	printf("Bitwise RIGHT-SHIFTing A = %d By %d Bits \nGives The Result = %d (Decimal).\n\n", a, num_bits, result);
 	PrintBinaryFormOfNumber(a);
 	PrintBinaryFormOfNumber(result);
 
@@ -55,6 +59,5 @@ void PrintBinaryFormOfNumber(unsigned int decimal_number)
 
 	for (i = 0; i < 8; i++)
 		printf("%u", binary_array[i]);
-
 	printf("\n\n");
 }
