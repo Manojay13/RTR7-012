@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <stdio.h> //'stdio.h' contains declaration of 'printf()'
+#include <stdlib.h> //'stdilib.h' contains declaration of 'exit()'
 int main(void)
 {
 	//variable declarations
@@ -90,5 +91,6 @@ int main(void)
 	printf("Number Of Elements In 'char' Array 'cArray_mk[]'           = %d Elements\n", cArray_num_elements_mk);
 	printf("Size Of Array 'cArray_mk[]' (%d Elements * %d Bytes)        = %d Bytes\n\n", cArray_num_elements_mk, char_size_mk, cArray_size_mk);
 
-	return(0);
+	exit(EXIT_SUCCESS);
+
 }
