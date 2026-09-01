@@ -1,20 +1,19 @@
-#include <stdio.h> //'stdio.h' contains declaration of 'printf()'
-#include <stdlib.h> //'stdilib.h' contains declaration of 'exit()
-
-struct Rectangle_mk
-{
-	struct MyPoint_mk
-	{
-		int x_mk;
-		int y_mk;
-	} point_01_mk, point_02_mk;
-
-} rect_mk = { {2, 3}, {5, 6} };
+#include <stdio.h>
 
 int main(void)
 {
 	//variable declarations
 	int length_mk, breadth_mk, area_mk;
+	
+	struct Rectangle_mk
+	{
+		struct MyPoint_mk
+		{
+			int x_mk;
+			int y_mk;
+		} point_01_mk, point_02_mk;
+
+	} rect_mk = { {2, 3}, {5, 6} };
 
 	//code
 	length_mk = rect_mk.point_02_mk.y_mk - rect_mk.point_01_mk.y_mk;
@@ -32,5 +31,5 @@ int main(void)
 	printf("Breadth Of Rectangle = %d\n\n", breadth_mk);
 	printf("Area Of Rectangle = %d\n\n", area_mk);
 
-	exit(EXIT_SUCCESS);
+	return(0);
 }
